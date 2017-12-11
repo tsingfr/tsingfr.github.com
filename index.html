@@ -1,183 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
+    <title>Traces - Remember where you've been</title>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Traces - Map, GPS Tracker, and a GPX Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">    
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
-    <!-- Custom styles for this template -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="css.css" rel="stylesheet">
+
   </head>
-  <!-- NAVBAR
-       ================================================== -->
   <body>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
 
-    <div class="jumbotron">
-      <div class="container special">
-        <h1>Traces</h1>
-        <p>Help you know where you've been, and plan your next trip</p>
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+	  <iframe width="960" height="540" src="https://www.youtube.com/embed/tpIFpA50uEQ?rel=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+	  
+          <header class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Traces App</h3>
+              <nav class="nav nav-masthead">
+                <a class="nav-link active" href="http://traces.website">Home</a>
+                <a class="nav-link" href="https://map.traces.website">Map</a>
+                <a class="nav-link" href="https://map.traces.website/signin">Signin</a>
+                <a class="nav-link" href="/help">Help</a>
+              </nav>
+            </div>
+          </header>
+
+          <main role="main" class="inner cover">
+            <h1 class="cover-heading">Remember where you've been</h1>
+            <p class="lead" id="comment"></p>
+            <p class="lead">
+	      <div id='apple-sign-in-button'></div>
+	      <div id='apple-sign-out-button'></div>
+            </p>
+          </main>
+
+          <footer class="mastfoot">
+            <div class="inner">
+              <p>Traces App since 2015. Crafted at Paris, Wenzhou and Eindhoven</p>
+            </div>
+          </footer>
+
+        </div>
+
       </div>
+
     </div>
-    
-    <!-- Marketing messaging and featurettes
-	 ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
 
     
-    <div class="container marketing">
-      
-      <div class="row featurette">
-	<a href="https://itunes.apple.com/us/app/traces-remember-where-you/id1015383536" target="_blank"><img class="featurette-image img-responsive center-block" src="appstore.png" alt="Generic placeholder image"></a>
-      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-      
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-12">
-	  <h2 class="featurette-heading">A Video Made Out of Traces iPad</h2>
-	  
-	  <div class="embed-responsive embed-responsive-16by9">
-	    <iframe src="https://player.vimeo.com/video/146885895?color=ffffff&title=0&byline=0&portrait=0" width="853" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	  </div>	  
-	</div>
-      </div>      
-      
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-5">
-          <h2 class="featurette-heading">Record Your Itineraries With Ease</h2>
-          <p class="lead">Traces brings you the most intuitive path recording interface. It shows all
-	    the interesting data on the screen: current speed, average speed, distance, 
-	    duration, altitude and GPS data accuracy. It uses a novel track recording 
-	    technique to reduce the amount of points in the GPX file.</p>
-        </div>
-        <div class="col-md-7">
-          <img class="featurette-image img-responsive center-block" src="1.png" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-5 col-md-push-7">
-          <h2 class="featurette-heading">Demonstrate Your Past Routes at a Glance</h2>
-          <p class="lead">Traces puts all your GPX tracks in a single map. Different track types are marked with different colors. Next time you run, try exploring the unvisited places with Traces. Even if you have thousands of GPX files, Traces can handle it efficiently.</p>
-        </div>
-        <div class="col-md-7 col-md-pull-5">
-          <img class="featurette-image img-responsive center-block" src="2.png" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-5">
-          <h2 class="featurette-heading">Star The Places That Matter</h2>
-	  <p class="lead">Traces 2 introduces the Star, which lets you mark interesting places such as landmarks, restaurants, or somewhere personal. There are two colors: red and green, which could mean places you want to go and places you've already been.</p>
-	</div>
-	<div class="col-md-7">
-	  <img class="featurette-image img-responsive center-block" src="3.PNG" alt="Generic placeholder image">
-	</div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-	<div class="col-md-4">
-	  <h2 class="featurette-heading">Beloved Wikipedia</h2>
-	  <p class="lead">We all love Wikipedia. Traces supports discovering nearby Wikipedia entries and you can star them easily, thanks to geonames.org.</p>
-	</div>
-	<div class="col-md-4">
-	  <img class="featurette-image img-responsive center-block" src="5.PNG" alt="Generic placeholder image">
-	</div>
-	<div class="col-md-4">
-	  <img class="featurette-image img-responsive center-block" src="6.PNG" alt="Generic placeholder image">
-	</div>
-
-      </div>
-
-      <div class="row featurette">
-
-	<hr class="featurette-divider">
-
-	<div class="col-md-5 col-md-push-7">
-	  <h2 class="featurette-heading">Safely Stored in iCloud Drive</h2>
-	  <p class="lead">All files are saved in iCloud Drive, thus are synchronized across all you devices. You can either manage iCloud Drive on icloud.com, or on Mac or Windows.</p>
-	</div>
-	<div class="col-md-7 col-md-pull-5">
-	  <img class="featurette-image img-responsive center-block" src="7.png" alt="Generic placeholder image">
-	</div>
-      </div>
-
-      <hr class="featurette-divider">
-
-       
-      <div class="row featurette">
-	<div class="col-md-7">	  
-	  <a href="https://itunes.apple.com/us/app/traces-remember-where-you/id1015383536" target="_blank"><img class="featurette-image img-responsive center-block" src="appstore.png" alt="Generic placeholder image"></a>
-	  
-	  <!-- FOOTER -->
-	  <footer class="text-center">
-	    <p><a href="index.html">English</a>, <a href="zh-cn.html">中国大陆</a></p>
-	    <p>&copy; 2015 - 2016 Traces</p>	    
-	  </footer>
-	  
-	</div>
-      	
-	<div class="col-md-5">
-
-	  <div class="fb-page text-right" 
-	       data-href="https://www.facebook.com/tracesapp2015"
-	       data-width="400"
-	       data-hide-cover="true"
-	       data-hide-cover="false"
-	       data-small-header="true"
-	       data-show-facepile="false" 
-	       data-show-posts="false"></div>
-
-	</div>
-
-	<!-- /END THE FEATURETTES -->
-
-
-    </div><!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-	 ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-65973835-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
