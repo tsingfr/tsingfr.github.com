@@ -26,7 +26,6 @@ a:hover {
 
 html,
 body {
-  height: 100%;
   background-color: #0AADFF;
 }
 body {
@@ -68,7 +67,10 @@ body {
 
 .masthead-brand {
   margin-bottom: 0;
+}
 
+.full-image {
+    max-width: 1300px;
 }
 
 .nav-masthead .nav-link {
@@ -94,13 +96,22 @@ body {
 }
 
 @media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
-    font-family: 'Optima';
-    font-weight: bold;
-  }
-  .nav-masthead {
-    float: right;
+    .masthead-brand {
+	float: left;
+	font-family: 'Optima';
+	font-weight: bold;
+    }
+
+    h5 {
+	font-family: 'Optima';
+	float: left;
+	font-size: 14px;
+	margin-left: 10px;
+    }
+
+
+    .nav-masthead {
+	float: right;
   }
 }
 
@@ -134,17 +145,17 @@ body {
 @media (min-width: 40em) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
+    position: absolute;
     top: 0;
   }
   .mastfoot {
-    position: fixed;
     bottom: 0;
   }
 
   /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;
+    height: 200px;
   }
 
   /* Handle the widths */
@@ -161,14 +172,14 @@ body {
   .cover-container {
       width: 960px;
   }
+
+  .site-wrapper-inner {
+      vertical-align: middle;
+      height: 100px;
+  }
+
 }
 
-#apple-sign-in-button,
-#apple-sign-out-button {
-    margin: auto;
-    width: 218px;
-}
-
-.apple-auth-button {
-    text-align: left;
+.info-row {
+    margin-top: 20px;
 }
