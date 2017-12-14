@@ -77,6 +77,10 @@ body {
     border-bottom: .25rem solid transparent;
 }
 
+img {
+    max-width: 100%;
+}
+
 img.help {
     width: 600px;
 }
