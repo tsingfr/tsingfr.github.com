@@ -2,6 +2,23 @@
  * Globals
  */
 
+/* Links */
+a,
+a:focus,
+a:hover {
+    color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: #333;
+    text-shadow: none; /* Prevent inheritance from `body` */
+    background-color: #fff;
+    border: .05rem solid #fff;
+}
+
 
 /*
  * Base structure
@@ -9,71 +26,72 @@
 
 html,
 body {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-
+    background-color: #0AADFF;
 }
-
-#root, .default {
-  background-color: #0AADFF;
-  height: 100%;
+body {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+    display: table;
+    width: 100%;
+    height: 100%; /* For at least Firefox */
+    min-height: 100%;
+    box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* Padding for spacing */
-
-.masthead .inner {
-  padding: 2rem;
-  width: 80%;
-  margin: auto;
+.inner {
+    padding: 2rem;
 }
+
 
 /*
  * Header
  */
 
-.mastfoot {
-    text-align: center;
-    color: white;
-    margin-top: 50px;
+.masthead {
+    margin-bottom: 2rem;
 }
 
 .masthead-brand {
-  font-size: 28px;
-  margin: 0px;
-  color: white;
-  font-family: 'Optima';
-  font-weight: bold;
+    margin-bottom: 0;
 }
 
 .nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255,255,255,1);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
+    padding: .25rem 0;
+    font-weight: 700;
+    color: rgba(255,255,255,1);
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+}
+
+p img {
+    max-width: 100%;
+}
+
+img.help {
+    width: 600px;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255,255,255,.25);
+    border-bottom-color: rgba(255,255,255,.25);
 }
 
 .nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
+    margin-left: 1rem;
 }
 
 .nav-masthead .active {
@@ -81,155 +99,110 @@ body {
     border-bottom-color: #fff;
 }
 
-.signinout img {
-    margin-bottom: 20px;
-    width: 450px;
+@media (min-width: 48em) {
+    .masthead-brand {
+	float: left;
+	font-family: 'Optima';
+	font-weight: bold;
+    }
+
+    h5 {
+	font-family: 'Optima';
+	float: left;
+	font-size: 14px;
+	margin-left: 10px;
+    }
+
+
+    .nav-masthead {
+	float: right;
+    }
 }
 
-.signinout img {
-    margin-bottom: 20px;
-    width: 90%;
+
+.p1, .p2, .p3, .p4 {
+    width: 300px;
 }
 
-  
-#apple-sign-in-button,
-#apple-sign-out-button {
-    margin: auto;
-    width: 218px;
+
+/*
+ * Cover
+ */
+
+.cover {
+    padding: 0 1.5rem;
+}
+.cover .btn-lg {
+    padding: .75rem 1.25rem;
+    font-weight: 700;
 }
 
-.apple-auth-button {
-    text-align: left;
-}
 
-div.signinout p {
-    margin: 10px 0  10px 0;
+/*
+ * Footer
+ */
 
-}
-
-div.signinout {
-    color: white;
-    width: 42em;
-    margin: auto;
-    padding-top:100px;
-    text-align: center;
-}
-
-.marked-area-text-container,
-header, h1, td {
-    text-align: left;
-    color: #333;
-}
-
-.map-header-div {
-    width: 120px;
-    height: 35px;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-
-    text-align: right;
-}
-
-.activity-table {
-    max-width: 100%;
-    margin: auto;
-
-}
-.activity-table tr th {
-    color: white;
-}
-
-.activity-table tr td {
-    color: white;
-}
-
-.header-bar {
+.mastfoot {
+    color: rgba(255,255,255,.9);
     width: 100%;
-    height: 40px;
-    position: absolute;
-    text-align: left;
-    z-index: 100;
-    background: white;
-}
-
-.mapContainer {
-    position:absolute;
-    top:40px;
-    bottom:0px;
-    width:calc(100%);
-    background: white;
-}
-
-.hidden {
-    display: none;
-}
-
-.shadow {
-    display: block;
-    float: left;
-    width:485px;
-    z-index: 100;
-    padding: 5px 10px 5px 5px;
-}
-
-.toolbox {
-    width: 250px;
-    float: left;
-    margin: 5px 10px 5px 20px;
-}
-
-.toolbox > button {
-    margin-right: 10px;
-}
-
-.lang-box {
-    width: 150px;
-    float: right;
-    top: -33px;
-    position: relative;
-}
-
-.lang-box a {
-    color: white;
-    display: block;
-    margin-left: 20px;
-    float: left;
-    width: 50px;
 }
 
 
-.pac-icon {
-    width: 0;
-    height: 0;
+/*
+ * Affix and center
+ */
+
+@media (min-width: 40em) {
+    /* Pull out the header and footer */
+    .masthead {
+	position: absolute;
+	top: 0;
+    }
+    .mastfoot {
+	bottom: 0;
+    }
+
+    /* Start the vertical centering */
+    .site-wrapper-inner {
+	vertical-align: middle;
+	height: 200px;
+    }
+
+    /* Handle the widths */
+    .masthead,
+    .mastfoot,
+    .cover-container {
+	width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
 }
 
-.pac-item {
-    padding: 3px;
-    text-shadow: none;
+@media (min-width: 62em) {
+    .masthead,
+    .cover-container {
+	width: 960px;
+    }
+
+    .site-wrapper-inner {
+	vertical-align: middle;
+	height: 100px;
+    }
+
+    .p1 {
+	width: 400px;
+    }
+
+    .p2 {
+	width: 600px;
+    }
+    .p3 {
+	width: 400px;
+    }
+    .p4 {
+	width: 600px;
+    }
+
 }
 
-.gm-iv-address {
-    height: 56px !important;
-    width: 180px;
+.info-row {
+    margin-top: 20px;
 }
-
-.xxxx {
-    z-index: 1000;
-    background: #ffffff;
-    width: 30px;
-    height: 15px;
-    position: absolute;
-    top: 40px;
-    left: 6px;
-    font-size: 10px;
-}
-
-.controls > div > button {
-    margin-left: 10px;
-}
-
-.controls > div > div {
-    float:left;
-}
-
